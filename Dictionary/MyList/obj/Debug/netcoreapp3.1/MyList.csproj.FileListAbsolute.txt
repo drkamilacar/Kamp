@@ -1,0 +1,13 @@
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\bin\Debug\netcoreapp3.1\MyList.exe
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\bin\Debug\netcoreapp3.1\MyList.deps.json
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\bin\Debug\netcoreapp3.1\MyList.runtimeconfig.json
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\bin\Debug\netcoreapp3.1\MyList.runtimeconfig.dev.json
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\bin\Debug\netcoreapp3.1\MyList.dll
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\bin\Debug\netcoreapp3.1\MyList.pdb
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\obj\Debug\netcoreapp3.1\MyList.csprojAssemblyReference.cache
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\obj\Debug\netcoreapp3.1\MyList.AssemblyInfoInputs.cache
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\obj\Debug\netcoreapp3.1\MyList.AssemblyInfo.cs
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\obj\Debug\netcoreapp3.1\MyList.csproj.CoreCompileInputs.cache
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\obj\Debug\netcoreapp3.1\MyList.dll
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\obj\Debug\netcoreapp3.1\MyList.pdb
+D:\YAZILIM\Eğitim\Kamp\Dictionary\MyList\obj\Debug\netcoreapp3.1\MyList.genruntimeconfig.cache
