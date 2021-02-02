@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\ConcoleUI\\ConsoleUI.csproj": {}
+    "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\ConsoleUI\\ConsoleUI.csproj": {}
   },
   "projects": {
     "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\Business\\Business.csproj": {
@@ -68,14 +68,14 @@
         }
       }
     },
-    "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\ConcoleUI\\ConsoleUI.csproj": {
+    "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\ConsoleUI\\ConsoleUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\ConcoleUI\\ConsoleUI.csproj",
+        "projectUniqueName": "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\ConsoleUI\\ConsoleUI.csproj",
         "projectName": "ConsoleUI",
-        "projectPath": "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\ConcoleUI\\ConsoleUI.csproj",
+        "projectPath": "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\ConsoleUI\\ConsoleUI.csproj",
         "packagesPath": "C:\\Users\\acark\\.nuget\\packages\\",
-        "outputPath": "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\ConcoleUI\\obj\\",
+        "outputPath": "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\ConsoleUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\acark\\AppData\\Roaming\\NuGet\\NuGet.Config",
