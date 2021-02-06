@@ -10,3 +10,5 @@ D:\YAZILIM\Eğitim\Kamp\MyFinalProject\DataAccess\obj\Debug\netstandard2.0\DataA
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.csproj.CopyComplete
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.dll
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\DataAccess\obj\Debug\netstandard2.0\DataAccess.pdb
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\DataAccess\bin\Debug\netstandard2.0\Core.dll
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\DataAccess\bin\Debug\netstandard2.0\Core.pdb

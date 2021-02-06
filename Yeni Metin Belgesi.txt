@@ -1,0 +1,5 @@
+Entities Concrete de nesneyi (class) tanımla
+DataAccess Abstract da Nesnenin Interface ini hazırla
+DataAccess Concrete Ef Dal hazırla
+Business katmanında Abstract I Service ini yaz
+Business katmanında Concrete ..Manager yaz

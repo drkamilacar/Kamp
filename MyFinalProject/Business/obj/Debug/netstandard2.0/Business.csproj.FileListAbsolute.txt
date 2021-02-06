@@ -12,3 +12,5 @@ D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Business\obj\Debug\netstandard2.0\Busines
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Business\obj\Debug\netstandard2.0\Business.csproj.CopyComplete
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Business\obj\Debug\netstandard2.0\Business.dll
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Business\obj\Debug\netstandard2.0\Business.pdb
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Business\bin\Debug\netstandard2.0\Core.dll
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Business\bin\Debug\netstandard2.0\Core.pdb
