@@ -1,0 +1,66 @@
+1. Entities => DTOs ==> DTO alanlarını tanımla : ProductDetailDto.cs
+   IDto 'dan inherit et.
+
+    public class ProductDetailDto : IDto
+    {
+        public int ProductId { get; set; }
+        public string ProductName { get; set; }
+        public string CategoryName { get; set; }
+        public short UnitsInStock { get; set; }
+    }
+
+2. DataAccess => Abstract ==> Dal interface içine operasyonu tanımla : IProductDal.cs
+
+    public interface IProductDal:IEntityRepository<Product>
+    {
+        List<ProductDetailDto> GetProductDetails();
+    }
+
+3. DataAccess => Concrete ==> Framework Dal içine operasyonu yaz : EfProductDal.cs
+
+    public class EfProductDal : EfEntityRepositoryBase<Product, NorthwindContext>, IProductDal
+    {
+        public List<ProductDetailDto> GetProductDetails()
+        {
+            using (NorthwindContext context = new NorthwindContext())
+            {
+                var result = from p in context.Products
+                             join c in context.Categories 
+                             on p.CategoryId equals c.CategoryId
+                             select new ProductDetailDto
+                             {
+                                 ProductId = p.ProductId,
+                                 ProductName = p.ProductName,
+                                 CategoryName = c.CategoryName,
+                                 UnitsInStock = p.UnitsInStock
+                             };
+                return result.ToList();
+            }
+        }
+    }
+
+4. Business => Abstract ==> Service içine operasyonu tanımla : IProductService.cs
+
+    public interface IProductService
+    {
+        List<Product> GetAll();
+        List<Product> GetAllByCategoryId(int id);
+        List<Product> GetByUnitPrice(decimal min, decimal max);
+        List<ProductDetailDto> GetProductDetails();
+    }
+
+5. Business => Concrete ==> Manager içinde operasyonu implemente et : ProductManager.cs
+
+        public List<ProductDetailDto> GetProductDetails()
+        {
+            return _productDal.GetProductDetails();
+        }
+
+
+Çağırma:
+            ProductManager productManager = new ProductManager(new EfProductDal());
+
+            foreach (var product in productManager.GetProductDetails())
+            {
+                Console.WriteLine(product.ProductName + " | " + product.CategoryName);
+            }

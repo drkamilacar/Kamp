@@ -1,0 +1,80 @@
+
+1. Entities => Concrete ==> Nesneyi (class) tanımla : Product.cs
+   IEntity 'den inherit et
+
+    public class Product:IEntity
+    {
+        public int ProductId { get; set; }
+        public int CategoryId { get; set; }
+        public string ProductName { get; set; }
+        public short UnitsInStock { get; set; }
+        public decimal UnitPrice { get; set; }
+    }
+
+2. DataAccess => Abstract ==> Nesnenin Interface ini hazırla : IProductDal.cs
+   IEntityRepository<Product> 'dan inherit et
+
+    public interface IProductDal:IEntityRepository<Product>
+    {
+    }
+
+3. DataAccess => Concrete ==> Ef Dal hazırla : EfProductDal.cs
+   EfEntityRepositoryBase<Product, NorthwindContext> ve IProductDal 'dan inherit et
+
+    public class EfProductDal : EfEntityRepositoryBase<Product, NorthwindContext>, IProductDal
+    {
+    }
+
+4. Business => Abstract ==> I Service ini yaz : IProductService.cs
+
+    public interface IProductService
+    {
+        List<Product> GetAll();
+        List<Product> GetAllByCategoryId(int id);
+        List<Product> GetByUnitPrice(decimal min, decimal max);
+        List<ProductDetailDto> GetProductDetails();
+    }
+
+5. Business => Concrete ==> ..Manager yaz : ProductManager.cs
+   IProductService 'ten inherit et ve implemente et
+
+    public class ProductManager : IProductService
+    {
+        IProductDal _productDal;
+        public ProductManager(IProductDal productDal)
+        {
+            _productDal = productDal;
+        }
+
+        public List<Product> GetAll()
+        {
+            //İş Kodları
+            //Yetkili mi?
+
+            return _productDal.GetAll();
+        }
+
+        public List<Product> GetAllByCategoryId(int id)
+        {
+            return _productDal.GetAll(p => p.CategoryId == id);
+        }
+
+        public List<Product> GetByUnitPrice(decimal min, decimal max)
+        {
+            return _productDal.GetAll(p => p.UnitPrice >= min && p.UnitPrice <= max);
+        }
+
+        public List<ProductDetailDto> GetProductDetails()
+        {
+            return _productDal.GetProductDetails();
+        }
+    }
+
+Çağırma:
+
+            ProductManager productManager = new ProductManager(new EfProductDal());
+
+            foreach (var product in productManager.GetByUnitPrice(50, 100))
+            {
+                Console.WriteLine(product.ProductName);
+            }
