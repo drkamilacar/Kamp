@@ -1,6 +1,6 @@
 
 1. Entities => Concrete ==> Nesneyi (class) tanımla : Product.cs
-   IEntity 'den inherit et
+   IEntity 'den implemente et
 
     public class Product:IEntity
     {
@@ -12,14 +12,14 @@
     }
 
 2. DataAccess => Abstract ==> Nesnenin Interface ini hazırla : IProductDal.cs
-   IEntityRepository<Product> 'dan inherit et
+   IEntityRepository<Product> 'dan implementeet
 
     public interface IProductDal:IEntityRepository<Product>
     {
     }
 
 3. DataAccess => Concrete ==> Ef Dal hazırla : EfProductDal.cs
-   EfEntityRepositoryBase<Product, NorthwindContext> ve IProductDal 'dan inherit et
+   EfEntityRepositoryBase<Product, NorthwindContext> ve IProductDal 'dan implemente et
 
     public class EfProductDal : EfEntityRepositoryBase<Product, NorthwindContext>, IProductDal
     {

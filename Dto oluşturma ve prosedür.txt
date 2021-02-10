@@ -1,5 +1,5 @@
 1. Entities => DTOs ==> DTO alanlarını tanımla : ProductDetailDto.cs
-   IDto 'dan inherit et.
+   IDto 'dan implemente et.
 
     public class ProductDetailDto : IDto
     {
