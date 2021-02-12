@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Entities.Concrete;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -38,5 +39,7 @@ namespace Business.Constants
         public static string RentalDeleted = "Kiralama silindi";
         public static string RentalListCreated = "Kiralamalar listelendi";
         public static string RentalUpdated = "Kiralama güncellendi";
+        public static string UserVerified = "Kullanıcı doğrulandı";
+        public static string UserNotVerified = "Kullanıcı doğrulanamadı";
     }
 }

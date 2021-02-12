@@ -35,6 +35,16 @@ namespace Business.Concrete
             return new SuccessDataResult<List<User>>(_userDal.GetAll(), Messages.UsersListed);
         }
 
+        public IDataResult<User> GetByEmailAndPassword(string email, string password)
+        {
+            var result = _userDal.Get(u => u.Email == email && u.Password == password);
+            if (result != null)
+            {
+                return new SuccessDataResult<User>(result, Messages.UserVerified);
+            }
+            return new ErrorDataResult<User>(result, Messages.UserNotVerified);
+        }
+
         public IDataResult<int> GetUserId(User user)
         {
             return new SuccessDataResult<int>(_userDal.Get(u => u.FirstName == user.FirstName && u.LastName == user.LastName && u.Email == user.Email).Id);

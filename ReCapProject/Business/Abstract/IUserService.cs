@@ -13,5 +13,6 @@ namespace Business.Abstract
         IResult Update(User user);
         IResult Delete(User user);
         IDataResult<int> GetUserId(User user);
+        IDataResult<User> GetByEmailAndPassword(string email, string password);
     }
 }

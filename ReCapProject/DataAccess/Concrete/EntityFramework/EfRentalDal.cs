@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using Core.Utilities.Results;
 
 namespace DataAccess.Concrete.EntityFramework
 {
@@ -37,9 +38,33 @@ namespace DataAccess.Concrete.EntityFramework
                                  CompanyName = c.CompanyName,
                                  DailyPrice = car.DailyPrice,
                                  RentDate = r.RentDate,
-                                 ReturnDate = r.ReturnDate
+                                 ReturnDate = (DateTime)r.ReturnDate
                              };
                 return result.ToList();
+            }
+        }
+
+        public bool IsCarAtCustomer(int id)
+        {
+            using (ReCapDbContext context = new ReCapDbContext())
+            {
+                var result = (from r in context.Rentals
+                              where (r.ReturnDate == null && r.CarId == id)
+                              orderby r.RentDate descending
+                              select new RentalDetailDto
+                              {
+                                  Id = r.Id,
+                                  CarId = r.CarId,
+                              }).Take(1);
+
+                if (result.ToList().Count == 0)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
             }
         }
     }
