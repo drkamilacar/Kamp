@@ -10,36 +10,65 @@ namespace ConsoleUI
     {
         static void Main(string[] args)
         {
+            CarManager carManager = new CarManager(new EfCarDal());
+            BrandManager brandManager = new BrandManager(new EfBrandDal());
+
             //EfCarDal carDal = new EfCarDal();
             //CarManager carManager = new CarManager(carDal);
-            //GetAllCars();
-            //GetAllBrands();
-            CarManager carManager = new CarManager(new EfCarDal());
-            foreach (var car in carManager.GetCarDetails())
+            //GetAllCars(carManager);
+            //GetAllBrands(brandManager);
+            AddCarDemo(carManager);
+            GetCarDetails(carManager);
+        }
+
+        private static void GetCarDetails(CarManager carManager)
+        {
+            var result = carManager.GetCarDetails();
+            if (result.Success)
             {
-                Console.WriteLine(car.BrandName + " | " + car.CarDescription + " | " + car.CarColor + " | " + car.DailyPrice);
+                foreach (var car in result.Data)
+                {
+                    Console.WriteLine(car.BrandName + " | " + car.CarDescription + " | " + car.CarColor + " | " + car.DailyPrice);
+                }
+            }
+            else
+            {
+                Console.WriteLine(result.Message);
+            };
+        }
+
+        private static void GetAllBrands(BrandManager brandManager)
+        {
+            var result = brandManager.GetAll();
+            if (result.Success)
+            {
+                foreach (var brand in result.Data)
+                {
+                    Console.WriteLine(brand.BrandName);
+                }
             }
         }
 
-        private static void GetAllBrands()
+        private static void GetAllCars(CarManager carManager)
         {
-            BrandManager brandManager = new BrandManager(new EfBrandDal());
-            foreach (var brand in brandManager.GetAll())
+
+            var result = carManager.GetAll();
+            if (result.Success)
             {
-                Console.WriteLine(brand.BrandName);
+                foreach (var car in result.Data)
+                {
+                    Console.WriteLine("Modeli: " + car.Description + " --- Model Yılı: " + car.ModelYear + " --- Fiyatı: " + car.DailyPrice + " TL");
+                }
             }
         }
 
-        private static void GetAllCars()
+        private static void AddCarDemo(CarManager carManager)
         {
-            CarManager carManager = new CarManager(new EfCarDal());
 
-            //carDal.Add(new Car { Id = 4, BrandId = 2, ColorId = 1, DailyPrice = 300, ModelYear = 2018, Description = "a" });
+            var result = carManager.Add(new Car { Id = 5, BrandId = 3, ColorId = 2, DailyPrice = 175, ModelYear = 2020, Description = "EGEA DİZEL" });
 
-            foreach (var car in carManager.GetAll())
-            {
-                Console.WriteLine("Modeli: " + car.Description + " --- Model Yılı: " + car.ModelYear + " --- Fiyatı: " + car.DailyPrice + " TL");
-            }
+            Console.WriteLine(result.Message);
+
         }
     }
 }

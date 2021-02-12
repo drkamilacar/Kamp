@@ -13,22 +13,6 @@ namespace DataAccess.Concrete.EntityFramework
 {
     public class EfCarDal : EfEntityRepositoryBase<Car, ReCapDbContext>, ICarDal
     {
-        public override void Add(Car entity)
-        {
-            if (entity.Description.Length < 2)
-            {
-                Console.WriteLine("Araba açıklaması en az 2 karakter uzunluğunda olmalıdır.");
-            }
-            else if (entity.DailyPrice == 0)
-            {
-                Console.WriteLine("Arabanın günlük fiyatı sıfır olamaz.");
-            }
-            else
-            {
-                base.Add(entity);
-            }
-        }
-
         public List<CarDetailDto> GetCarDetails()
         {
             using (ReCapDbContext context = new ReCapDbContext())
