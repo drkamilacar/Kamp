@@ -1,0 +1,31 @@
+1. Business katmanında Autofac ve Autofac.Extras.DynamicProxy nuget packagelarını yükle
+
+2. Business altında "DependencyResolvers" klasörü oluştur.
+
+3. DependencyResolvers altında "Autofac" klasörü oluştur.
+
+4. AutofacBusinessModule sınıfı oluştur. :Module dan inherit et.
+
+5. Load yordamını override et:
+
+        protected override void Load(ContainerBuilder builder)
+        {
+            builder.RegisterType<ProductManager>().As<IProductService>().SingleInstance();
+            builder.RegisterType<EfProductDal>().As<IProductDal>().SingleInstance();
+        }
+
+6. WebAPI altında Program.cs aç
+
+7. Host.CreateDefaultBuilder(args) ALTINA AŞAĞIDAKİ SATIRLARI EKLE:
+
+                .UseServiceProviderFactory(new AutofacServiceProviderFactory())
+                .ConfigureContainer<ContainerBuilder>(builder =>
+                {
+                    builder.RegisterModule(new AutofacBusinessModule());
+                })
+
+AutofacServiceProviderFactory ===> Autofac.Extensions.DependencyInjection package install et
+
+gerekli ampulleri çöz
+
+
