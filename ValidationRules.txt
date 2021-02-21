@@ -3,7 +3,7 @@
 
 2. ValidationRules altına "FluentValidation" klasörü ekle.
 
-3. Business da Manage Nuget Packages ==> FşuentValidation (Jeremy Skinner) paketini yükle
+3. Business da Manage Nuget Packages ==> FluentValidation (Jeremy Skinner) paketini yükle
 
 4. FluentValidation klasörüne "ProductValidator" sınıfı ekle, "AbstractValidator<Product>" dan inherit et. Validation Dto lar için de olabilir.
 
