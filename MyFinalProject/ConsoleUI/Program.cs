@@ -11,44 +11,44 @@ namespace ConsoleUI
         {
             //ProductTest();
             //CategoryTest();
-            ProductDetailsTest();
+            //ProductDetailsTest();
         }
 
-        private static void ProductDetailsTest()
-        {
-            ProductManager productManager = new ProductManager(new EfProductDal());
+        //private static void ProductDetailsTest()
+        //{
+        //    ProductManager productManager = new ProductManager(new EfProductDal(),new EfCategoryDal());
 
-            var result = productManager.GetProductDetails();
-            if (result.Success)
-            {
-                foreach (var product in result.Data)
-                {
-                    Console.WriteLine(product.ProductName + " | " + product.CategoryName);
-                }
-            }
-            else
-            {
-                Console.WriteLine(result.Message);
-            }
-        }
+        //    var result = productManager.GetProductDetails();
+        //    if (result.Success)
+        //    {
+        //        foreach (var product in result.Data)
+        //        {
+        //            Console.WriteLine(product.ProductName + " | " + product.CategoryName);
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine(result.Message);
+        //    }
+        //}
 
         private static void CategoryTest()
         {
             CategoryManager categoryManager = new CategoryManager(new EfCategoryDal());
-            foreach (var category in categoryManager.GetAll())
+            foreach (var category in categoryManager.GetAll().Data)
             {
                 Console.WriteLine(category.CategoryName);
             }
         }
 
-        private static void ProductTest()
-        {
-            ProductManager productManager = new ProductManager(new EfProductDal());
+        //private static void ProductTest()
+        //{
+        //    ProductManager productManager = new ProductManager(new EfProductDal());
 
-            foreach (var product in productManager.GetByUnitPrice(50, 100).Data)
-            {
-                Console.WriteLine(product.ProductName);
-            }
-        }
+        //    foreach (var product in productManager.GetByUnitPrice(50, 100).Data)
+        //    {
+        //        Console.WriteLine(product.ProductName);
+        //    }
+        //}
     }
 }
