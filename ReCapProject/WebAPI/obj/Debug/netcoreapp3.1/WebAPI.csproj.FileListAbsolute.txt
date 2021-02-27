@@ -66,3 +66,8 @@ D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.cspro
 D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.dll
 D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.pdb
 D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\obj\Debug\netcoreapp3.1\WebAPI.genruntimeconfig.cache
+D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.dll
+D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
+D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
+D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
+D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll

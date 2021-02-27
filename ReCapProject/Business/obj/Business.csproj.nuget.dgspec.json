@@ -28,6 +28,9 @@
           "netstandard2.0": {
             "targetAlias": "netstandard2.0",
             "projectReferences": {
+              "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\Core\\Core.csproj": {
+                "projectPath": "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\Core\\Core.csproj"
+              },
               "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\DataAccess\\DataAccess.csproj": {
                 "projectPath": "D:\\YAZILIM\\Eğitim\\Kamp\\ReCapProject\\DataAccess\\DataAccess.csproj"
               },
@@ -131,6 +134,10 @@
             "FluentValidation": {
               "target": "Package",
               "version": "[9.5.1, )"
+            },
+            "Microsoft.AspNetCore.Hosting.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",

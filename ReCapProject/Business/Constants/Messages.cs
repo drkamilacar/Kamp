@@ -41,5 +41,11 @@ namespace Business.Constants
         public static string RentalUpdated = "Kiralama güncellendi";
         public static string UserVerified = "Kullanıcı doğrulandı";
         public static string UserNotVerified = "Kullanıcı doğrulanamadı";
+        internal static string CarImageAdded = "Araç resmi yüklendi";
+        internal static string CarImageDeleted = "Araç resmi silindi";
+        internal static string CarsImagesListed="Araç resimleri listelendi";
+        internal static string CarImageUpdated="Araç resmi güncellendi";
+        internal static string ImageLimitExceededOfTheCar="Bu araç için daha fazla resim eklenemez";
+        internal static string FileCannotUploaded="Doaya yüklenemedi";
     }
 }
