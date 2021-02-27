@@ -1,0 +1,22 @@
+1. Veritabanında tabloları oluştur
+2. Core katmanında Encryption, Hashing, JWT klasörlerini oluştur ve sınıfları yaz
+3. WebAPI da appsettings dosyasını aşağıdaki gibi yap:
+
+{
+  "TokenOptions": {
+    "Audience": "kamil@kavolab.com",
+    "Issuer": "kamil@kavolab.com",
+    "AccessTokenExpiration": 10,
+    "SecurityKey": "mysupersecretkeymysupersecretkey"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft": "Warning",
+      "Microsoft.Hosting.Lifetime": "Information"
+    }
+  },
+  "AllowedHosts": "*"
+}
+
+4. 

@@ -1,9 +1,9 @@
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Core\bin\Debug\netstandard2.0\Core.deps.json
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Core\bin\Debug\netstandard2.0\Core.dll
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Core\bin\Debug\netstandard2.0\Core.pdb
-D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Core\obj\Debug\netstandard2.0\Core.AssemblyInfoInputs.cache
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Core\obj\Debug\netstandard2.0\Core.AssemblyInfo.cs
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Core\obj\Debug\netstandard2.0\Core.csproj.CoreCompileInputs.cache
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Core\obj\Debug\netstandard2.0\Core.dll
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Core\obj\Debug\netstandard2.0\Core.pdb
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\Core\obj\Debug\netstandard2.0\Core.csprojAssemblyReference.cache

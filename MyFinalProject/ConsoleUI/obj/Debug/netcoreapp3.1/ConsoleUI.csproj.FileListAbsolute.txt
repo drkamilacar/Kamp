@@ -65,3 +65,9 @@ D:\YAZILIM\Eğitim\Kamp\MyFinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Autofac.Extras.DynamicProxy.dll
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Castle.Core.dll
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\FluentValidation.dll
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Abstractions.dll
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.dll
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.WebUtilities.dll
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.ObjectPool.dll
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\ConsoleUI\bin\Debug\netcoreapp3.1\Microsoft.Net.Http.Headers.dll
