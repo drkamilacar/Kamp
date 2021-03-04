@@ -49,5 +49,11 @@ namespace Business.Constants
         public static string ImageLimitExceededOfTheCar="Bu araç için daha fazla resim eklenemez";
         public static string FileCannotUploaded="Doaya yüklenemedi";
         public static string AuthorizationDenied="Yetkiniz yok";
+        public static string UserRegistered = "Kullanıcı kaydedildi";
+        public static string UserNotFound = "Kullanıcı bulunamadı";
+        public static string PasswordError = "Parola hatalı";
+        public static string SuccessfulLogin = "Giriş başarılı";
+        public static string UserAlreadyExists = "Kullanıcı zaten mevcut";
+        public static string AccessTokenCreated = "Token oluşturuldu";
     }
 }

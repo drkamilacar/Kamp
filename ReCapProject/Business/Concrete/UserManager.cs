@@ -1,8 +1,8 @@
 ﻿using Business.Abstract;
 using Business.Constants;
+using Core.Entities.Concrete;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
-using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -35,20 +35,20 @@ namespace Business.Concrete
             return new SuccessDataResult<List<User>>(_userDal.GetAll(), Messages.UsersListed);
         }
 
-        public IDataResult<User> GetByEmailAndPassword(string email, string password)
+
+        public IDataResult<List<OperationClaim>> GetClaims(User user)
         {
-            var result = _userDal.Get(u => u.Email == email && u.Password == password);
-            if (result != null)
-            {
-                return new SuccessDataResult<User>(result, Messages.UserVerified);
-            }
-            return new ErrorDataResult<User>(result, Messages.UserNotVerified);
+            return new SuccessDataResult<List<OperationClaim>>(_userDal.GetClaims(user));
         }
 
-        public IDataResult<int> GetUserId(User user)
+        public IDataResult<User> GetByMail(string email)
         {
-            return new SuccessDataResult<int>(_userDal.Get(u => u.FirstName == user.FirstName && u.LastName == user.LastName && u.Email == user.Email).Id);
+            return new SuccessDataResult<User>(_userDal.Get(u => u.Email == email) );
         }
+        //public IDataResult<int> GetUserId(User user)
+        //{
+        //    return new SuccessDataResult<int>(_userDal.Get(u => u.FirstName == user.FirstName && u.LastName == user.LastName && u.Email == user.Email).Id);
+        //}
 
         public IResult Update(User user)
         {

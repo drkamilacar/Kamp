@@ -1,4 +1,5 @@
 ﻿using Business.Concrete;
+using Core.Entities.Concrete;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Concrete.InMemory;
 using Entities.Concrete;
@@ -27,56 +28,56 @@ namespace ConsoleUI
 
             User user = new User();
 
-            Console.WriteLine("Araç kiralamak için sisteme giriş yapmalısınız.");
-            Console.Write("Eposta adresinizi girin : ");
-            user.Email = Console.ReadLine();
-            Console.Write("Parolanızı girin : ");
-            user.Password = Console.ReadLine();
+            //Console.WriteLine("Araç kiralamak için sisteme giriş yapmalısınız.");
+            //Console.Write("Eposta adresinizi girin : ");
+            //user.Email = Console.ReadLine();
+            //Console.Write("Parolanızı girin : ");
+            //user.Password = Console.ReadLine();
 
-            var verifiedUser = userManager.GetByEmailAndPassword(user.Email, user.Password);
-            if (verifiedUser.Success)
-            {
-                Console.WriteLine(verifiedUser.Message);
+            //var verifiedUser = userManager.GetByEmailAndPassword(user.Email, user.Password);
+            //if (verifiedUser.Success)
+            //{
+            //    Console.WriteLine(verifiedUser.Message);
 
-                var currentCustomer = customerManager.GetCustomerByUserId(verifiedUser.Data.Id);
+            //    var currentCustomer = customerManager.GetCustomerByUserId(verifiedUser.Data.Id);
 
-                if (currentCustomer.Success)
-                {
-                    GetAllCars(carManager);
+            //    if (currentCustomer.Success)
+            //    {
+            //        GetAllCars(carManager);
 
-                    Console.WriteLine();
-                    Console.Write("Kiralamak istediğiniz aracın numarasını giriniz : ");
-                    int selectedCarId = Convert.ToInt32(Console.ReadLine());
+            //        Console.WriteLine();
+            //        Console.Write("Kiralamak istediğiniz aracın numarasını giriniz : ");
+            //        int selectedCarId = Convert.ToInt32(Console.ReadLine());
 
-                    if (rentalManager.IsCarAtCustomer(selectedCarId) == false)
-                    {
-                        Rental rental = new Rental();
-                        rental.CarId = selectedCarId;
-                        rental.CustomerId = currentCustomer.Data.CustomerId;
-                        rental.RentDate = DateTime.Now;
-                        rental.ReturnDate = null;
+            //        if (rentalManager.IsCarAtCustomer(selectedCarId) == false)
+            //        {
+            //            Rental rental = new Rental();
+            //            rental.CarId = selectedCarId;
+            //            rental.CustomerId = currentCustomer.Data.CustomerId;
+            //            rental.RentDate = DateTime.Now;
+            //            rental.ReturnDate = null;
 
-                        var rentalAdded = rentalManager.Add(rental);
-                        if (rentalAdded.Success)
-                        {
-                            Console.WriteLine(rentalAdded.Message);
-                        }
-                    }
-                    else
-                    {
-                        Console.WriteLine("Seçtiğiniz araç müşteride olduğu için kiralayamazsınız");
-                    }
+            //            var rentalAdded = rentalManager.Add(rental);
+            //            if (rentalAdded.Success)
+            //            {
+            //                Console.WriteLine(rentalAdded.Message);
+            //            }
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Seçtiğiniz araç müşteride olduğu için kiralayamazsınız");
+            //        }
 
-                } 
-                else
-                {
-                    Console.WriteLine("Kullanıcı olarak doğrulamanız yapıldı ancak bir müşteri olmadığınız için araç kiralama yapamazsınız.");
-                }
-            }
-            else
-            {
-                Console.WriteLine(verifiedUser.Message);
-            }
+            //    } 
+            //    else
+            //    {
+            //        Console.WriteLine("Kullanıcı olarak doğrulamanız yapıldı ancak bir müşteri olmadığınız için araç kiralama yapamazsınız.");
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine(verifiedUser.Message);
+            //}
         }
 
         private static void SaveUser(UserManager userManager, CustomerManager customerManager)
@@ -90,7 +91,7 @@ namespace ConsoleUI
             Console.Write("Kullanıcı Eposta adresini girin : ");
             user.Email = Console.ReadLine();
             Console.Write("Kullanıcı parolasını girin : ");
-            user.Password = Console.ReadLine();
+            //user.Password = Console.ReadLine();
 
             var result = userManager.Add(user);
             if (result.Success)
@@ -108,8 +109,8 @@ namespace ConsoleUI
             if (isUserEvenACustomer == true)
             {
                 Customer customer = new Customer();
-                var savedUserId = userManager.GetUserId(user);
-                customer.UserId = savedUserId.Data;
+                //var savedUserId = userManager.GetUserId(user);
+                //customer.UserId = savedUserId.Data;
                 Console.Write("Müşteri firma adını girin : ");
                 customer.CompanyName = Console.ReadLine();
 
