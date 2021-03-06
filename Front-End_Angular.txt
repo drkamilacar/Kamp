@@ -1,0 +1,30 @@
+1. angular kurulu değilse:
+
+	npm install -g @angular/cli
+
+   komutunu VS-Code terminalde çalıştırarak kur.
+
+2. Proje klasörünü oluştur. cd kullanarak terminalde klasöre yerleş.
+3. ng new _projeadı_ komutu ile projeyi oluştur.
+4. ng serve --open ile yayına alabilirsin
+5. Eğer başkasının githubından indirirsen npm install ile node_modules kurulur. Çünkü github atılırken node_modules gönderilmez.
+6. .ts dosyasındaki @Component kısmı datayı yöneten yer
+     selector: html tagi
+     templateUrl : hangi html i yönetiyorsun
+
+7. ./ yol olarak aynı klasörü ifade eder
+8. satır sonuna ; koymak zorunlu değil
+9. Tek tırnak da çift tırnak da çalışır
+10. ts deki değişkeni html de {{title}} şeklinde yazarak kullanabiliyoruz
+11. JavaScript case sensitive dir.
+12. *ngFor direktifi bunu tekrarla demek
+           <li *ngFor="let product of products">{{product.productName}}</li>
+    buradaki let ==> var karşılığı, değişken tanımlama keywordu
+13. Component ekleme için components klasöründe sağ tıkla Open In Integrated Terminal de:
+    terminal satırında : ng g component product
+    çalıştır.
+14. npm install bootstrap ile bootstrap kur
+15. angular.json dosyasındaki 30. satırdaki styles kısmına "./node_modules/bootstrap/dist/css/bootstrap.min.css" ekle
+16. yeni paket kurduktan sonra terminal node penceresinde ctrl+c ile stoplayıp tekrar ng serve --open ile yayına al
+17. bracket   prettier
+
