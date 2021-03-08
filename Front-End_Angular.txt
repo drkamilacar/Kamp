@@ -26,5 +26,6 @@
 14. npm install bootstrap ile bootstrap kur
 15. angular.json dosyasındaki 30. satırdaki styles kısmına "./node_modules/bootstrap/dist/css/bootstrap.min.css" ekle
 16. yeni paket kurduktan sonra terminal node penceresinde ctrl+c ile stoplayıp tekrar ng serve --open ile yayına al
-17. bracket   prettier
+17. bracket: kodlamayı renklendirme aracı    prettier code formatter: kod formatlayıcı
+18.
 
