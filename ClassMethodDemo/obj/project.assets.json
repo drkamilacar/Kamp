@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\YAZILIM\\Eğitim\\Kamp\\GameProject\\GameProject.csproj",
-      "projectName": "GameProject",
-      "projectPath": "D:\\YAZILIM\\Eğitim\\Kamp\\GameProject\\GameProject.csproj",
+      "projectUniqueName": "D:\\YAZILIM\\Eğitim\\Kamp\\ClassMethodDemo\\ClassMethodDemo.csproj",
+      "projectName": "ClassMethodDemo",
+      "projectPath": "D:\\YAZILIM\\Eğitim\\Kamp\\ClassMethodDemo\\ClassMethodDemo.csproj",
       "packagesPath": "C:\\Users\\acark\\.nuget\\packages\\",
-      "outputPath": "D:\\YAZILIM\\Eğitim\\Kamp\\GameProject\\obj\\",
+      "outputPath": "D:\\YAZILIM\\Eğitim\\Kamp\\ClassMethodDemo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\acark\\AppData\\Roaming\\NuGet\\NuGet.Config",

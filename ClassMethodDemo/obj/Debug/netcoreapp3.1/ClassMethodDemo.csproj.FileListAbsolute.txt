@@ -1,0 +1,13 @@
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\bin\Debug\netcoreapp3.1\ClassMethodDemo.exe
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\bin\Debug\netcoreapp3.1\ClassMethodDemo.deps.json
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\bin\Debug\netcoreapp3.1\ClassMethodDemo.runtimeconfig.json
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\bin\Debug\netcoreapp3.1\ClassMethodDemo.runtimeconfig.dev.json
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\bin\Debug\netcoreapp3.1\ClassMethodDemo.dll
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\bin\Debug\netcoreapp3.1\ClassMethodDemo.pdb
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\obj\Debug\netcoreapp3.1\ClassMethodDemo.csprojAssemblyReference.cache
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\obj\Debug\netcoreapp3.1\ClassMethodDemo.AssemblyInfoInputs.cache
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\obj\Debug\netcoreapp3.1\ClassMethodDemo.AssemblyInfo.cs
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\obj\Debug\netcoreapp3.1\ClassMethodDemo.csproj.CoreCompileInputs.cache
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\obj\Debug\netcoreapp3.1\ClassMethodDemo.dll
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\obj\Debug\netcoreapp3.1\ClassMethodDemo.pdb
+D:\YAZILIM\Eğitim\Kamp\ClassMethodDemo\obj\Debug\netcoreapp3.1\ClassMethodDemo.genruntimeconfig.cache
