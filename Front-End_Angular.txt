@@ -27,5 +27,19 @@
 15. angular.json dosyasındaki 30. satırdaki styles kısmına "./node_modules/bootstrap/dist/css/bootstrap.min.css" ekle
 16. yeni paket kurduktan sonra terminal node penceresinde ctrl+c ile stoplayıp tekrar ng serve --open ile yayına al
 17. bracket: kodlamayı renklendirme aracı    prettier code formatter: kod formatlayıcı
-18.
+18. npm install bootstrap@5.0.0-beta2
+19. creative-tim.com şablon sitesi
+20. JS de public yerine export kullanılıyor
+21. app altında models klasörü oluşturulup buraya obje interfaceleri hazırlanıyor
+
+export interface Product {
+  productId: number;
+  categoryId: number;
+  productName: string;
+  unitsInStock: number;
+  unitPrice: number;
+}
+
+22. servis oluşturmak için : ng g service product
+23. 
 

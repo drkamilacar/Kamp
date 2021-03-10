@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
+import { Product } from 'src/app/models/product';
+import { ProductListResponseModel } from 'src/app/models/productListResponseModel';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-product',
@@ -6,46 +10,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent implements OnInit {
-  product1 = {
-    productId: 1,
-    productName: 'Bardak',
-    categoryId: 3,
-    unitPrice: 15,
-  };
-  product2 = {
-    productId: 2,
-    productName: 'Laptop',
-    categoryId: 1,
-    unitPrice: 12500,
-  };
-  product3 = {
-    productId: 3,
-    productName: 'Mouse',
-    categoryId: 1,
-    unitPrice: 75,
-  };
-  product4 = {
-    productId: 4,
-    productName: 'Keyboard',
-    categoryId: 1,
-    unitPrice: 250,
-  };
-  product5 = {
-    productId: 5,
-    productName: 'Camera',
-    categoryId: 2,
-    unitPrice: 5000,
-  };
+  products: Product[] = [];
+  dataLoaded = false;
 
-  products = [
-    this.product1,
-    this.product2,
-    this.product3,
-    this.product4,
-    this.product5,
-  ];
+  constructor(private productService: ProductService) {}
 
-  constructor() {}
+  ngOnInit(): void {
+    this.getProducts();
+  }
 
-  ngOnInit(): void {}
+  getProducts() {
+    this.productService.getProducts().subscribe((response) => {
+      this.products = response.data;
+      this.dataLoaded = true;
+    });
+  }
 }

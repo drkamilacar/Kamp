@@ -72,3 +72,5 @@ D:\YAZILIM\Eğitim\Kamp\MyFinalProject\WebAPI\bin\Debug\netcoreapp3.1\Castle.Cor
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extensions.DependencyInjection.dll
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
 D:\YAZILIM\Eğitim\Kamp\MyFinalProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\WebAPI\bin\Debug\netcoreapp3.1\log4net.dll
+D:\YAZILIM\Eğitim\Kamp\MyFinalProject\WebAPI\bin\Debug\netcoreapp3.1\log4net.config
