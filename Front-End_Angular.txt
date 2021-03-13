@@ -43,3 +43,53 @@ export interface Product {
 22. servis oluşturmak için : ng g service product
 23. 
 
+0. ResponseModel oluşturuyoruz
+1. Sınıfın interfaceini oluşturuyoruz
+2. Sınıfın ResponeModelini oluşturuyoruz
+3. ng g service category --skipTests ile servis oluşturuyoruz
+4. service.ts dosyasını
+
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ListResponseModel } from '../models/ListResponseModel';
+import { Category } from '../models/category';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class CategoryService {
+  apiUrl = 'https://localhost:44378/api/categories/getall';
+
+  constructor(private httpClient: HttpClient) {}
+
+  getProducts(): Observable<ListResponseModel<Category>> {
+    return this.httpClient.get<ListResponseModel<Category>>(this.apiUrl);
+  }
+}
+
+yapıyoruz.
+
+5. category componente gel, düzenle
+6. html i yaz
+7. routing: app-routing.module.ts içinde yapılıyor
+8. tip tanımlamada new gereği olmaması için (initialize gerekmesin diye) tsconfig.json dosyasında
+
+    "strict": true,
+
+altına
+
+    "strictPropertyInitialization": false,
+
+koy
+
+9. dataaccess business api sıralama
+10.dropdown çalışması için jquery lazım
+
+npm install jquery
+
+sonra angular.json styles altına scripts: altına kodları yaz
+
+
+
+
