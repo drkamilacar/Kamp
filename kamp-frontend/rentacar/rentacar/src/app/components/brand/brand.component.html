@@ -1,0 +1,18 @@
+<div class="list-group">
+    <button
+      type="button"
+      routerLink="/brands"
+      [class]="getAllBrandClass()"
+    >
+      Tüm Ürünler
+    </button>
+    <button
+      type="button"
+      (click)="setCurrentBrand(brand)"
+      routerLink="/brands/brand/{{ brand.brandId }}"
+      *ngFor="let brand of brands"
+      [class]="getCurrentBrandClass(brand)"
+    >
+      {{ brand.brandName }}
+    </button>
+  </div>

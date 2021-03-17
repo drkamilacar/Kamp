@@ -72,3 +72,4 @@ D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Autofac.Extr
 D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Castle.Core.dll
 D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\FluentValidation.dll
 D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\YAZILIM\Eğitim\Kamp\ReCapProject\WebAPI\bin\Debug\netcoreapp3.1\log4net.dll

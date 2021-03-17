@@ -80,16 +80,79 @@ yapıyoruz.
 altına
 
     "strictPropertyInitialization": false,
-
+"strictNullChecks": false,
 koy
 
-9. dataaccess business api sıralama
+9. dataaccess business api =>kod yazma sıralaması
 10.dropdown çalışması için jquery lazım
 
 npm install jquery
 
 sonra angular.json styles altına scripts: altına kodları yaz
 
+PIPE: elimi<deki veriyi görsel olarak farklılaştırmak için kullanılır
+pipe klasörü oluştur
+yerleş
+ng g pipe vatAdded
+
+| işareti ile
+|uppercase
+ <td>{{ product.productName |uppercase}}</td> ürün adları büyük harfle gösterilir
+
+
+[(ngModel)]="filterText"  banana notation ile two way binding yapılır
+
+two way binding için app.module.ts içinde 
+
+import { FormsModule } from '@angular/forms'; 
+
+şeklinde import etmek gerekiyor.
+
+return filterText
+      ? value.filter(
+          (p: Product) =>
+            p.productName.toLocaleLowerCase().includes(filterText) == true
+        )
+      : value;
+
+return filterText
+      ? value.filter(
+          (p: Product) =>
+            p.productName.toLocaleLowerCase().indexof(filterText) !== -1
+        )
+      : value;
+
+
+
+MESAJ ürününü yüklemek için:
+
+npm install ngx-toastr
+npm install @angular/animations
+
+angular.json a styles altına
+"./node_modules/ngx-toastr/toastr.css" ekle
+
+app.module.ts e 
+import { ToastrModule } from 'ngx-toastr';
+ekle
+app.module.ts i
+imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ToastrModule.forRoot({ positionClass: 'toast-bottom-right}' }),
+  ],
+haline getir.
+
+componentte:
+ constructor(
+    private productService: ProductService,
+    private activatedRoute: ActivatedRoute,
+    private toastrService: ToastrService
+  ) {}
+
+yapıp kullanabilirsin.
 
 
 
